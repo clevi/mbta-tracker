@@ -1,0 +1,55 @@
+// Layout follows mobile-first design paradigm, with medium and large screens being constrained to media queries.
+
+body {
+    @include outer-container;
+}
+
+div.appcontainer {
+    @include fill-parent;
+
+    padding-top: 2em;
+
+    @include media($medium) {
+      @include span-columns(6);
+      @include shift(1);
+      padding-top: 6em;
+    }
+
+    @include media($large) {
+        @include span-columns(10);
+        @include shift(1);
+    }
+}
+
+div.meta-info {
+    @include fill-parent;
+
+    & div {
+        font-size: 1.25em;
+        text-align: center;
+        padding: 1em;
+
+        @include media($medium) {
+            font-size: 1em;
+        }
+
+        @include media($large) {
+            display: inline-block;
+            &.refresh-data {
+                float: right;
+            }    
+        }
+    }
+    
+}
+
+// span.current-date-time {
+//     display: block;
+//     @include media($medium) {
+//         display: inline-block;
+//     }
+// }
+
+div.refresh-data {
+    
+}

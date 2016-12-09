@@ -1,0 +1,32 @@
+.refresh-button {
+	$radius: 16px;
+	@include border-top-radius($radius);
+	@include border-bottom-radius($radius);
+
+	background: $positive;
+	border: 0;
+	display: block;
+    margin: 1em auto;
+    padding: 1em;
+
+	@include media($medium) {
+		display: inline-block;
+		margin: 0 0.5em;
+		padding: 0 6px;
+	}
+
+	&:hover {
+		background: tint($positive, 20%);
+		color: tint($font, 20%);
+	}
+
+	&:active {
+		background: tint($positive, 30%);
+		color: tint($font, 30%);
+	}
+
+	&:disabled {
+		background: shade($positive, 20%);
+		color: shade($font, 20%);
+	}
+}

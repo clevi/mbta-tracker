@@ -1,0 +1,39 @@
+th, td {
+	text-align: center;
+}
+
+tbody tr {
+	background: $highlight;
+	vertical-align: middle;
+
+	&.train-positive {
+		color: $positive;
+	}
+
+	&.train-alert {
+		color: $caution;
+	}
+
+	&.train-negative {
+		color: $error;
+	}
+
+	&:hover {
+		background-color: $emphasis;
+	}
+}
+
+th:hover {
+	background-color: $highlight;
+}
+
+// Bootstrap Overrides
+
+.table-no-border>thead>tr>th, 
+.table-no-border>tbody>tr>th, 
+.table-no-border>tfoot>tr>th, 
+.table-no-border>thead>tr>td, 
+.table-no-border>tbody>tr>td, 
+.table-no-border>tfoot>tr>td {
+    border: none !important;
+}

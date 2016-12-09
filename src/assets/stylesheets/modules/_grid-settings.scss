@@ -1,0 +1,29 @@
+@import "../vendor/neat/neat-helpers";
+
+$visual-grid : false;
+$visual-grid-color: #253443;
+$visual-grid-index: 999;
+$visual-grid-opacity: 0.2;
+
+/// Sets the visual grid color. Set with `!global` flag.
+///
+/// @type Color
+
+// $visual-grid-color: #eee !default;
+
+// /// Sets the `z-index` property of the visual grid. Can be `back` (behind content) or `front` (in front of content). Set with `!global` flag.
+// ///
+// /// @type String
+
+// $visual-grid-index: back !default;
+
+// /// Sets the opacity property of the visual grid. Set with `!global` flag.
+// ///
+// /// @type Number (unitless)
+
+// $visual-grid-opacity: 0.4 !default;
+
+// Following mobile first design, the default grid should span 4 columns and get bigger with the screen size.
+$grid-columns: 4;
+$medium: new-breakpoint(min-width 500px 8);
+$large: new-breakpoint(min-width 801px 12);
